@@ -1,3 +1,5 @@
+export const dynamic = 'force-dynamic'
+
 import { HomeForm } from '@/components/HomeForm';
 import { WeatherWidget } from '@/components/WeatherWidget';
 import { Suspense } from 'react';
