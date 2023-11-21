@@ -46,7 +46,9 @@ const HomeForm = () => {
       return
     }
 
-    router.push(`?lat=${ coordinates.latitude }&lon=${ coordinates.longitude }`)
+    router.push(`?lat=${ coordinates.latitude }&lon=${ coordinates.longitude }`, {
+      scroll: false
+    })
   }
 
   return (

@@ -11,8 +11,6 @@ export default function Page({
   params: { slug: string };
   searchParams?: { [key: string]: string | string[] | undefined };
 }) {
-  console.log('page ------------ render')
-
   return <>
     <HomeForm/>
     { searchParams && Object.hasOwn(searchParams, 'lat') && Object.hasOwn(searchParams, 'lon') &&
