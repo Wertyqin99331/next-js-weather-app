@@ -8,7 +8,7 @@ type WeatherWidgetProps = {
 }
 
 const WeatherWidget = async ({ lat, lon }: WeatherWidgetProps) => {
-  const res = await fetch(`api/weather?lat=${ lat }&lon=${ lon }`).then(res => res.json()) as IGetWeatherDTO
+  const res = await fetch(`/api/weather?lat=${ lat }&lon=${ lon }`).then(res => res.json()) as IGetWeatherDTO
 
   return (
     <div className='pt-40 text-black text-3xl font-normal flex flex-col gap-y-4 items-center'>
