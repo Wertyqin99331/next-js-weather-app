@@ -8,8 +8,6 @@ type YandexMapProps = {
 }
 
 const YandexMap = ({ latitude, longitude }: YandexMapProps) => {
-  console.log('yandex rerender')
-
   return (
     <YMaps>
       <Map state={ { center: [latitude, longitude], zoom: 11 } } width='100%' height='300px'>
