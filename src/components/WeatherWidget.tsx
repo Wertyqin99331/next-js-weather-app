@@ -9,7 +9,7 @@ type WeatherWidgetProps = {
 }
 
 const WeatherWidget = async ({ lat, lon }: WeatherWidgetProps) => {
-  const res = await fetch(`${ WEATHER_API_URL }?q=${ lat },${ lon }&key=${ process.env.NEXT_PUBLIC_cWEATHER_API_KEY }`, {
+  const res = await fetch(`${ WEATHER_API_URL }?q=${ lat },${ lon }&key=${ process.env.NEXT_PUBLIC_WEATHER_API_KEY }`, {
     method: 'GET',
     next: {
       revalidate: 60
