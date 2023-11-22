@@ -9,12 +9,14 @@ type WeatherWidgetProps = {
 }
 
 const WeatherWidget = async ({ lat, lon }: WeatherWidgetProps) => {
-  const res = await fetch(`${ WEATHER_API_URL }?q=${ lat },${ lon }&key=${ process.env.WEATHER_API_KEY }`, {
+  const res = await fetch(`${ WEATHER_API_URL }?q=${ lat },${ lon }&key=${ process.env.NEXT_PUBLIC_cWEATHER_API_KEY }`, {
     method: 'GET',
     next: {
       revalidate: 60
     }
   }).then(res => res.json() as Promise<IGetWeatherDTO>)
+
+  console.log(res)
 
   return (
     <div className='pt-40 text-black text-3xl font-normal flex flex-col gap-y-4 items-center'>
